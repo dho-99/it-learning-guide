@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="スマートフォンだけで始める未経験者向けIT入門ガイド。7つの学習セクションと、各セクションの前提・具体的な学習タスク・利用サイトをまとめています。">
+<title>スマホで始める IT入門｜7つの学習セクション</title>
+<style>
+:root{color-scheme:light;--ink:#202936;--muted:#647184;--line:#e3e8ef;--paper:#fff;--bg:#f3f6fa;--accent:#2865c7;--soft:#edf4ff;--green:#18794e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.75}
+main{width:min(960px,calc(100% - 28px));margin:24px auto 40px}
+header{padding:30px;border-radius:20px;color:white;background:linear-gradient(135deg,#193b68,#3677c9)}
+h1{margin:0;font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.25}
+header p{margin:10px 0 0;color:#e7f0ff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{padding:4px 10px;border:1px solid #ffffff66;border-radius:999px;font-size:.9rem}
+section{margin-top:18px}
+.panel,.day,.agenda-card,.resource{background:var(--paper);border:1px solid var(--line);border-radius:15px}
+.panel{padding:18px 21px}
+h2{font-size:1.35rem;margin:30px 0 12px}
+h3{font-size:1.12rem;margin:0}
+h4{font-size:1rem;margin:18px 0 6px}
+p{margin:8px 0}
+.note{color:var(--muted);font-size:.92rem}
+.agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.agenda-card{padding:14px 16px}
+.agenda-card strong{display:block;margin-bottom:3px}
+.day{padding:20px;margin:14px 0;scroll-margin-top:12px}
+.day-head{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.num{width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;border-radius:12px;background:var(--soft);color:var(--accent);font-weight:800}
+.meta{font-size:.9rem;color:var(--muted)}
+.resource{padding:12px 14px;margin:10px 0;background:#fbfcfe}
+a{color:var(--accent);overflow-wrap:anywhere}
+ol,ul{padding-left:1.35rem}
+li{margin:5px 0}
+.task{padding-left:0;list-style:none}
+.task li{margin:8px 0}
+.task input{width:17px;height:17px;vertical-align:-3px;margin-right:7px;accent-color:var(--green)}
+.prompt,.code{background:#f4f7fb;border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-wrap:anywhere}
+code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+pre{white-space:pre-wrap;margin:8px 0}
+.goal{margin-top:14px;padding:12px 14px;border-left:4px solid var(--green);background:#f0f8f4;border-radius:8px}
+.prereq{margin-left:8px;background:#fff4e0;color:#8a5a00;vertical-align:2px;white-space:nowrap}
+.agenda-card a.t{text-decoration:none;color:var(--ink)}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;background:#eef2f7;color:#465366;font-size:.82rem;margin-right:5px}
+footer{text-align:center;color:var(--muted);font-size:.85rem;margin:28px 0}
+@media(max-width:650px){main{width:calc(100% - 18px);margin:10px auto 24px}header{padding:23px 19px}.agenda{grid-template-columns:1fr}.day{padding:16px}.day-head{align-items:flex-start}}
+@media print{body{background:white}main{width:100%;margin:0}header{print-color-adjust:exact;-webkit-print-color-adjust:exact}.day,.panel,.agenda-card{break-inside:avoid}a{color:#174f9f}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>スマホで始める<br>IT入門</h1>
+<p>PCがなくても大丈夫。7つの学習セクションから、自分のペースでITの世界に触れてみよう。</p>
+<div class="chips"><span class="chip">スマートフォンのみ</span><span class="chip">無料ツール中心</span><span class="chip">1セクション20〜55分</span><span class="chip">未経験者向け</span></div>
+</header>
+
+<section class="panel">
+<strong>このガイドの使い方</strong>
+<p>このガイドは「7つの学習セクション」でできています。1日に1つ進める必要はありません。自分のペースで、好きなところから始めてください。</p>
+<ul>
+<li>興味のあるセクションから始めてもかまいません。</li>
+<li>分からないところは飛ばしたり、後から戻ったりしてOKです。</li>
+<li>各セクションのタイトル横にある「前提」は、先に取り組んでおくと理解しやすいセクションを示します。前提があるセクションで迷ったら、前提のセクションに戻ってみてください。</li>
+<li>全部を暗記する必要はありません。「何をするものか」「どんな場面で使うか」が少し分かれば十分です。</li>
+</ul>
+<p class="note">スマートフォンではコード入力やターミナル操作がしづらい場合があります。その場合は、説明を読む・コードを眺めるところまででOK。無理にアカウント登録やアプリのインストールをする必要はありません。</p>
+</section>
+
+<h2>このガイドで大切にしたいこと</h2>
+<section class="panel">
+<p><strong>全部を覚える必要はありません。</strong></p>
+<p>今回の目的は、資格を取ることでも、すぐに仕事ができるようになることでもありません。</p>
+<ul>
+<li>知らないことを調べるのが苦にならないか</li>
+<li>試行錯誤して答えを見つけるのが面白いか</li>
+<li>もう少し続けてみたいと思えるか</li>
+</ul>
+<p>まずは1つのセクションを、気軽に試してみましょう。興味が続いたら、その次にPC環境や本格的な学習方法を考えれば大丈夫です。</p>
+</section>
+
+<h2>所要時間の目安</h2>
+<section class="panel">
+<p>スマホで調べ、複数の説明を読み比べ、自分なりに理解するには時間がかかります。次の時間はあくまで目安です。じっくり時間をかけて構いません。</p>
+<ul>
+<li><strong>キーワード調査：</strong>15〜25分</li>
+<li><strong>内容の整理・理解：</strong>10〜15分</li>
+<li><strong>クイズや実践：</strong>10〜15分</li>
+</ul>
+<p class="note">セクションによって含まれる内容が異なるため、各セクションの目安時間は異なります。</p>
+</section>
+
+<h2>7つの学習セクション</h2>
+<section class="agenda">
+<div class="agenda-card"><strong><a class="t" href="#sec1">セクション 1｜ITの仕事を知る</a></strong><span class="tag prereq" style="margin:0 0 4px">前提：なし</span><br>インフラ・開発、Webサイト、サーバー<p class="note"><b>ゴール：</b>IT業界にどんな仕事があるか、ざっくり説明できる。</p></div>
+<div class="agenda-card"><strong><a class="t" href="#sec2">セクション 2｜Linuxに触れる</a></strong><span class="tag prereq" style="margin:0 0 4px">前提：なし</span><br>Linuxとは何か、pwd・ls・cd<p class="note"><b>ゴール：</b>基本コマンドの意味を調べ、目的に合うものを選べる。</p></div>
+<div class="agenda-card"><strong><a class="t" href="#sec3">セクション 3｜Linuxコマンドを知る</a></strong><span class="tag prereq" style="margin:0 0 4px">前提：セクション2</span><br>mkdir・touch・cat・grep・mv<p class="note"><b>ゴール：</b>目的に合うコマンドを選び、ファイル操作の流れを考える。</p></div>
+<div class="agenda-card"><strong><a class="t" href="#sec4">セクション 4｜Pythonの基礎</a></strong><span class="tag prereq" style="margin:0 0 4px">前提：なし</span><br>Python、プログラミング言語、インタープリタ・コンパイラ、Hello World<p class="note"><b>ゴール：</b>Pythonやプログラム実行の関連キーワードを整理し、Hello Worldを実行してコードと結果の関係を確認できる。</p></div>
+<div class="agenda-card"><strong><a class="t" href="#sec5">セクション 5｜プログラミングの基本</a></strong><span class="tag prereq" style="margin:0 0 4px">前提：セクション4</span><br>変数、数値と文字列、if文<p class="note"><b>ゴール：</b>変数と条件分岐の基本を理解する。</p></div>
+<div class="agenda-card"><strong><a class="t" href="#sec6">セクション 6｜繰り返し処理を知る</a></strong><span class="tag prereq" style="margin:0 0 4px">前提：セクション5</span><br>for文、繰り返し、簡単な計算<p class="note"><b>ゴール：</b>繰り返し処理の流れを追えるようになる。</p></div>
+<div class="agenda-card"><strong><a class="t" href="#sec7">セクション 7｜振り返り</a></strong><span class="tag prereq" style="margin:0 0 4px">前提：なし（取り組んだ範囲でOK）</span><br>面白かったこと、難しかったこと、次に学びたいこと<p class="note"><b>ゴール：</b>興味を持ったことと次に試したいことを言葉にする。</p></div>
+</section>
+
+<h2>学習を始める前に</h2>
+<section class="panel">
+<ul>
+<li>スマートフォンのブラウザ（Safari / Chrome）を使います。</li>
+<li>サイトが英語表示の場合は、ブラウザの翻訳機能を使って構いません。</li>
+<li>学習サイトの画面構成は変更されることがあります。リンク先で該当する見出しを探してください。</li>
+<li>個人情報、パスワード、勤務先の情報などは、学習サイトやAIチャットに入力しないでください。</li>
+<li>コマンドは意味を確認してから試します。今回は削除・初期化などの操作は行いません。</li>
+</ul>
+</section>
+
+<h2>各セクションの詳細タスク</h2>
+
+<article class="day" id="sec1">
+<div class="day-head"><div class="num">01</div><div><h3>ITの仕事とWebの仕組みを知る <span class="tag prereq">前提：なし</span></h3><div class="meta">目安：25〜40分｜キーワード調査15〜25分／整理・理解10〜15分</div></div></div>
+<p><strong>このセクションの目的：</strong>いくつかのキーワードを手がかりに、ITの仕事やWebサイトの仕組みを自分なりに調べ、言葉同士のつながりを考える。</p>
+<div class="resource"><strong>使うもの</strong><br>スマートフォンのブラウザ（Safari / Chrome）と検索エンジン。調べ方や検索する順番は自由です。</div>
+<h4>タスク1：ITの仕事に関するキーワードを調べる（約8〜12分）</h4>
+<p>次のキーワードを手がかりに、気になったものから調べてみましょう。検索ワードの組み立て方や、見るサイトは自分で選んで構いません。</p>
+<div class="prompt"><strong>キーワード</strong><ul><li>インフラエンジニア</li><li>開発エンジニア</li><li>システム運用・保守</li></ul></div>
+<ol>
+<li>それぞれがどんな仕事なのか、自分が分かりやすい説明を探す。</li>
+<li>「何を扱う仕事か」「誰の役に立つか」「仕事同士にどんな関係がありそうか」を考える。</li>
+<li>調べた内容を、箇条書き・図・文章など好きな方法で整理する。</li>
+</ol>
+<h4>タスク2：Webサイトの仕組みに関するキーワードを調べる（約8〜12分）</h4>
+<div class="prompt"><strong>キーワード</strong><ul><li>Webサイト</li><li>ブラウザ</li><li>サーバー</li><li>リクエスト</li><li>レスポンス</li></ul></div>
+<ol>
+<li>それぞれの言葉が何を指すのか、自分なりに調べる。</li>
+<li>言葉同士がどのようにつながっているのか、調べた情報をもとに考える。</li>
+<li>普段スマートフォンでWebサイトを開くとき、裏側でどんなやり取りが起きていそうか、好きな方法でまとめる。</li>
+</ol>
+<h4>タスク3：内容を整理して理解を確認する（約10〜15分）</h4>
+<ul class="task">
+<li><label><input type="checkbox">調べたITの仕事について、違いや関係を自分の言葉で説明できる</label></li>
+<li><label><input type="checkbox">Webサイトを開いたときの言葉同士のつながりを、自分なりに説明できる</label></li>
+</ul>
+<p class="note">最初から正確な説明を作る必要はありません。複数の説明を見比べて、自分が納得できる形に整理してみましょう。分からない言葉が出てきたら、その言葉を新しいキーワードとして調べてみてください。</p>
+<div class="goal"><strong>このセクションのゴール：</strong>ITの仕事やWebサイトの仕組みについて、キーワード同士の意味やつながりを自分なりに説明できる。</div>
+</article>
+
+<article class="day" id="sec2">
+<div class="day-head"><div class="num">02</div><div><h3>Linuxに触れる <span class="tag prereq">前提：なし</span></h3><div class="meta">目安：25〜40分｜キーワード調査15〜25分／クイズ10〜15分</div></div></div>
+<p><strong>このセクションの目的：</strong>Linuxとコマンドラインの概要を知り、基本コマンドの意味を調べたうえで、目的に合うコマンドを考える。</p>
+<div class="resource"><strong>使うサイト：</strong><a href="https://labex.io/linuxjourney/courses/getting-started" target="_blank" rel="noopener">Linux Journey – Getting Started</a><br>Linuxの基礎を学ぶ教材。英語表示の場合はブラウザの翻訳機能を使ってください。</div>
+<h4>タスク1：Linuxとコマンドラインについて調べる（約7〜10分）</h4>
+<ol>
+<li>Linux Journeyで「Getting Started」や「What is Linux?」にあたるレッスンを探す。</li>
+<li>Linuxが何なのか、どのような機器・サービスで使われているのかを調べる。</li>
+<li>「Command Line」または「The Shell」にあたる説明を探し、画面上のボタンやアイコンで操作する方法との違いを考える。</li>
+</ol>
+<h4>タスク2：3つのコマンドの意味を調べる（約8〜15分）</h4>
+<p>次のコマンドを1つずつ調べ、「何をするコマンドか」「どんな場面で使うか」を自分の言葉でメモしましょう。</p>
+<div class="prompt"><strong>調べるコマンド</strong><p><code>pwd</code>　<code>ls</code>　<code>cd</code></p></div>
+<h4>タスク3：目的に合うコマンドを答えるクイズ（約10〜15分）</h4>
+<p>次の操作をしたいとき、どのコマンドを使えばよいでしょう？ タスク2で調べた内容をもとに、まず自分で答えてみましょう。必要なら複数のコマンドを順番に使います。</p>
+<div class="prompt"><ol>
+<li>今、自分がどのフォルダにいるのか確認したい。</li>
+<li>今いるフォルダの中に、どんなファイルやフォルダがあるか一覧で見たい。</li>
+<li>「documents」というフォルダに移動したい。</li>
+<li>移動したあと、本当に目的のフォルダに移動できたか確認したい。</li>
+</ol></div>
+<p>答えはコマンド名だけでなく、「なぜそのコマンドを選んだのか」も一言添えてみましょう。</p>
+<ul class="task">
+<li><label><input type="checkbox">Linuxとコマンドラインがどんなものか調べた</label></li>
+<li><label><input type="checkbox">pwd・ls・cdの意味を自分の言葉で説明できる</label></li>
+<li><label><input type="checkbox">やりたい操作に合うコマンドをクイズで考えられた</label></li>
+</ul>
+<p class="note">この日はコマンドを実行できなくても問題ありません。調べて意味を理解し、目的に合わせて選べることが目標です。</p>
+<div class="goal"><strong>このセクションのゴール：</strong>pwd・ls・cdの役割を理解し、やりたい操作に応じて使うコマンドを選べる。</div>
+</article>
+
+<article class="day" id="sec3">
+<div class="day-head"><div class="num">03</div><div><h3>Linuxコマンドを知る <a class="tag prereq" href="#sec2" style="text-decoration:none">前提：セクション2</a></h3><div class="meta">目安：25〜40分｜キーワード調査15〜25分／クイズ・実践10〜15分</div></div></div>
+<p><strong>このセクションの目的：</strong>ファイルや文章を扱うコマンドの意味を調べ、やりたい操作に応じてコマンドを選ぶ練習をする。</p>
+<div class="resource"><strong>使うサイト：</strong><a href="https://labex.io/linuxjourney/courses/command-line" target="_blank" rel="noopener">Linux Journey – Command Line</a><br>コマンドラインのレッスン一覧。スマホで操作しにくければ、説明を読むだけでも構いません。</div>
+<h4>タスク1：5つのコマンドの意味を調べる（約15〜25分）</h4>
+<p>教材内または検索エンジンで、次のコマンドをそれぞれ調べましょう。「何をするためのものか」「どんなときに使いそうか」を自分の言葉でメモします。</p>
+<div class="prompt"><strong>調べるコマンド</strong><p><code>mkdir</code>　<code>touch</code>　<code>cat</code>　<code>grep</code>　<code>mv</code></p></div>
+<p class="note"><code>mv</code>はファイルやフォルダの移動・名前変更に関係するコマンドです。まずは自分で調べ、どんな使い方ができるか確認してみましょう。</p>
+<h4>タスク2：やりたい操作からコマンドを選ぶクイズ（約7〜10分）</h4>
+<p>次の場面で使うコマンドは何でしょう？ 1つでできるものも、複数を組み合わせるものもあります。コマンド名と、選んだ理由を答えてみましょう。</p>
+<div class="prompt"><ol>
+<li>「practice」という名前の新しいフォルダを作りたい。</li>
+<li>「memo.txt」という空のファイルを新しく作りたい。</li>
+<li>「memo.txt」の中に書かれている内容を画面で確認したい。</li>
+<li>たくさんの文章が書かれたファイルから、「error」という単語が含まれる行だけを探したい。</li>
+<li>「memo.txt」というファイルの名前を「memo_old.txt」に変更したい。</li>
+<li>「memo.txt」を「archive」というフォルダの中へ移動したい。</li>
+</ol></div>
+<h4>タスク3：コマンドを組み合わせると？（約3〜5分）</h4>
+<p>次の操作を実現するには、どのコマンドをどんな順番で使えばよいか考えてみましょう。</p>
+<div class="prompt">「practice」というフォルダを作り、その中に「memo.txt」というファイルを作って、最後にファイルの中身を確認する。</div>
+<p>コマンドの順番を自分で組み立ててみましょう。答えを先に見ず、タスク1で調べた意味から予想するのがポイントです。</p>
+<ul class="task">
+<li><label><input type="checkbox">5つのコマンドの役割を自分の言葉で説明できる</label></li>
+<li><label><input type="checkbox">やりたい操作に合うコマンドを選べた</label></li>
+<li><label><input type="checkbox">複数のコマンドを組み合わせる流れを考えられた</label></li>
+</ul>
+<p class="note">今回は用途を理解することが目的です。スマートフォンで実行環境を用意する必要はありません。見慣れないコマンドを意味を確認せずにコピーして実行しない習慣も大切です。</p>
+<div class="goal"><strong>このセクションのゴール：</strong>mkdir・touch・cat・grep・mvの役割を理解し、やりたい操作に合わせてコマンドを選べる。</div>
+</article>
+
+<article class="day" id="sec4">
+<div class="day-head"><div class="num">04</div><div><h3>Pythonの基礎 <span class="tag prereq">前提：なし</span></h3><div class="meta">目安：35〜55分｜キーワード調査15〜25分／整理・理解10〜15分／実行10〜15分</div></div></div>
+<p><strong>このセクションの目的：</strong>Pythonやプログラムの実行に関するキーワードを自分で調べて関係を整理し、そのうえでPythonのコードを実際に実行して、コードと実行結果の関係を確認する。</p>
+<div class="resource"><strong>使うもの（タスク1）</strong><br>スマートフォンのブラウザと検索エンジン。調べ方や見るサイトは自由です。Programizはタスク2で初めて開きます。</div>
+<h4>タスク1：キーワードから調べる（調査15〜25分＋整理10〜15分）</h4>
+<p>次のキーワードを、まず自分で調べてみましょう。コードを動かすのは、調べたあとです。</p>
+<div class="prompt"><strong>キーワード</strong><ul><li>Python</li><li>プログラミング言語</li><li>インタープリタ</li><li>コンパイラ</li><li>プログラムの実行</li></ul></div>
+<ol>
+<li>それぞれの言葉が何を指すのか、複数の説明を見比べながら調べる。</li>
+<li>言葉同士の関係を考える。たとえば「Pythonとプログラミング言語の関係は？」「インタープリタとコンパイラは何が違う？」「書いたプログラムは、どのようにして実行されるの？」など。</li>
+<li>調べた内容を、箇条書き・図・文章など好きな方法で整理する。</li>
+</ol>
+<ul class="task">
+<li><label><input type="checkbox">5つのキーワードの意味を、自分の言葉で説明できる</label></li>
+<li><label><input type="checkbox">キーワード同士の関係を、自分なりに整理できた</label></li>
+</ul>
+<h4>タスク2：Programizで実行する（約10〜15分）</h4>
+<div class="resource"><strong>ここで初めて使うサイト：</strong><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener">Programiz – Python Online Compiler</a><br>ブラウザ上でPythonコードを入力して実行できるサイト。インストールやアカウント登録なしで試せます。</div>
+<ol>
+<li>Programizのページを開き、コード入力欄（Editor / main.py）を探す。</li>
+<li>最初から入っているサンプルコードを消して、次の1行を入力する。</li>
+</ol>
+<div class="code"><pre>print("Hello World")</pre></div>
+<ol start="3">
+<li>「Run」ボタンを押して実行する。</li>
+<li>出力欄（Output）に何が表示されたか確認する。</li>
+<li>書いたコードと、表示された結果の関係を考える。「どの部分が、どの表示につながっているか？」</li>
+<li>表示する言葉を好きな言葉（例：<code>"こんにちは！"</code>）に変えて、もう一度実行し、結果がどう変わるか確認する。</li>
+<li>タスク1で調べたキーワード（プログラムの実行、インタープリタなど）と、いま起きたことを結びつけて考えてみる。</li>
+</ol>
+<ul class="task">
+<li><label><input type="checkbox">Pythonのコードを入力して実行できた</label></li>
+<li><label><input type="checkbox">コードと実行結果の関係を説明できる</label></li>
+<li><label><input type="checkbox">文字を変えて、結果が変わることを確認した</label></li>
+</ul>
+<p class="note">スマホで入力欄が扱いづらい場合は、ページ内のサンプルコードを読んで、printが「画面に表示する命令」だと分かればOKです。</p>
+<div class="goal"><strong>このセクションのゴール：</strong>Python・プログラミング言語・インタープリタ・コンパイラ・プログラムの実行の関係を自分なりに説明でき、Hello Worldを実行してコードと結果の関係を確認できる。</div>
+</article>
+
+<article class="day" id="sec5">
+<div class="day-head"><div class="num">05</div><div><h3>プログラミングの基本 <a class="tag prereq" href="#sec4" style="text-decoration:none">前提：セクション4</a></h3><div class="meta">目安：20〜30分｜実践10〜15分／整理・理解10〜15分</div></div></div>
+<p><strong>このセクションの目的：</strong>プログラムが情報を保存し、条件によって動きを変えられることを知る。</p>
+<div class="resource"><strong>使うサイト：</strong><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener">Programiz – Python Online Compiler</a></div>
+<h4>タスク1：変数を知る（約6〜10分）</h4>
+<p>変数は、値を入れておく名前付きの箱のようなものです。次のコードを入力して実行します。</p>
+<div class="code"><pre>name = "Hanako"
+age = 30
+
+print(name)
+print(age)</pre></div>
+<p><code>name</code>には文字列、<code>age</code>には数値を入れています。出力結果がどうなるか確認しましょう。</p>
+<h4>タスク2：数値と文字列の違い（約5〜8分）</h4>
+<div class="code"><pre>print(10 + 5)
+print("10" + "5")</pre></div>
+<p>上は数値の足し算で15、下は文字列の連結で105になります。見た目が似ていても、数値と文字列では扱いが違うことを確認します。</p>
+<h4>タスク3：if文による条件分岐（約9〜12分）</h4>
+<p>if文は「もし条件に当てはまるなら、この処理をする」という命令です。</p>
+<div class="code"><pre>age = 20
+
+if age >= 18:
+    print("成人です")
+else:
+    print("18歳未満です")</pre></div>
+<p><code>age = 20</code>を <code>age = 15</code> に変えて実行し、表示が変わることを確認します。</p>
+<ul class="task">
+<li><label><input type="checkbox">変数に値を入れられるイメージが分かった</label></li>
+<li><label><input type="checkbox">数値と文字列の違いを確認した</label></li>
+<li><label><input type="checkbox">if文で条件に応じて表示が変わった</label></li>
+</ul>
+<div class="goal"><strong>このセクションのゴール：</strong>変数に情報を入れ、if文で条件によって処理を分けられると理解する。</div>
+</article>
+
+<article class="day" id="sec6">
+<div class="day-head"><div class="num">06</div><div><h3>繰り返し処理を知る <a class="tag prereq" href="#sec5" style="text-decoration:none">前提：セクション5</a></h3><div class="meta">目安：20〜30分｜実践10〜15分／整理・理解10〜15分</div></div></div>
+<p><strong>このセクションの目的：</strong>同じ処理を何度も書かず、繰り返し命令でまとめられることを知る。</p>
+<div class="resource"><strong>使うサイト：</strong><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener">Programiz – Python Online Compiler</a></div>
+<h4>タスク1：for文を知る（約4〜6分）</h4>
+<p>for文は、決められた回数やデータの数だけ、同じ処理を繰り返すために使います。</p>
+<h4>タスク2：3回繰り返してみる（約6〜8分）</h4>
+<div class="code"><pre>for i in range(3):
+    print("こんにちは")</pre></div>
+<p>実行して「こんにちは」が3回表示されることを確認します。<code>range(3)</code>は3回分の繰り返しを作ります。</p>
+<h4>タスク3：数字を表示する（約6〜8分）</h4>
+<div class="code"><pre>for i in range(1, 6):
+    print(i)</pre></div>
+<p>1から5まで順番に表示されます。<code>range(1, 6)</code>は1以上6未満、つまり1〜5を表します。</p>
+<h4>タスク4：簡単な合計を計算する（約4〜8分）</h4>
+<div class="code"><pre>total = 0
+
+for i in range(1, 6):
+    total = total + i
+
+print(total)</pre></div>
+<p>1＋2＋3＋4＋5の合計である15が表示されれば成功です。</p>
+<ul class="task">
+<li><label><input type="checkbox">for文で同じ処理を繰り返せた</label></li>
+<li><label><input type="checkbox">1から5まで順番に表示できた</label></li>
+<li><label><input type="checkbox">繰り返しを使った合計計算の流れを追えた</label></li>
+</ul>
+<div class="goal"><strong>このセクションのゴール：</strong>for文で処理を繰り返せることと、小さなプログラムの流れを追えることを知る。</div>
+</article>
+
+<article class="day" id="sec7">
+<div class="day-head"><div class="num">07</div><div><h3>振り返り <span class="tag prereq">前提：なし（取り組んだ範囲でOK）</span></h3><div class="meta">目安：20〜30分｜整理・理解10〜15分／振り返り10〜15分</div></div></div>
+<p><strong>このセクションの目的：</strong>ここまで取り組んだ内容を振り返り、次に何を学びたいか考える。取り組んでいないセクションがあっても問題ありません。</p>
+<h4>タスク1：できたことを確認する（約5〜8分）</h4>
+<ul class="task">
+<li><label><input type="checkbox">ITの仕事にいくつか種類があると分かった</label></li>
+<li><label><input type="checkbox">Linuxと基本コマンドの役割を知った</label></li>
+<li><label><input type="checkbox">Pythonとプログラムの実行について調べ、コードを実行した</label></li>
+<li><label><input type="checkbox">変数・if文・for文の意味を知った</label></li>
+</ul>
+<h4>タスク2：3つの質問に答える（約10〜15分）</h4>
+<ol>
+<li>一番面白かった内容は何？</li>
+<li>一番難しかった内容は何？ それは「説明が難しい」のか「操作が難しい」のか？</li>
+<li>もう少し調べてみたい、試してみたいと思ったことは何？</li>
+</ol>
+<h4>タスク3：次の方向性を考える（約5〜8分）</h4>
+<p>興味に応じて、次のような方向を考えてみましょう。</p>
+<ul>
+<li><strong>Linuxやサーバーが気になる：</strong>インフラエンジニア、クラウド、ネットワークなど。</li>
+<li><strong>コードを書くのが面白い：</strong>プログラミング、Web開発、業務自動化など。</li>
+<li><strong>人の困りごとを解決するのが好き：</strong>ITサポート、ヘルプデスク、業務改善など。</li>
+<li><strong>まだ分からない：</strong>それで大丈夫。別のIT職種を調べたり、気になったセクションをもう一度試したりしてみましょう。</li>
+</ul>
+<div class="goal"><strong>このセクションのゴール：</strong>得意・不得意を決めつけず、「何に興味を持ったか」「次に何を試したいか」を言葉にする。</div>
+</article>
+
+<h2>今回使う学習サイト一覧</h2>
+<section class="panel">
+<ul>
+<li><strong>Linux Journey：</strong><a href="https://labex.io/linuxjourney/courses/getting-started" target="_blank" rel="noopener">Linux入門</a> ／ <a href="https://labex.io/linuxjourney/courses/command-line" target="_blank" rel="noopener">コマンドライン</a><br><span class="note">Linuxの基礎やコマンドを学ぶ教材。スマホで操作しにくければ読むだけでもOK。</span></li>
+<li><strong>Programiz：</strong><a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank" rel="noopener">Python Online Compiler</a><br><span class="note">ブラウザでPythonコードを入力・実行できる。インストール不要。セクション4のタスク2から使用します。</span></li>
+<li><strong>検索エンジン：</strong>セクション1（IT職種・Webの仕組み）とセクション4（Pythonの基礎キーワード）を調べるために使用。検索結果は複数の説明を見比べ、公式・教育機関など信頼できる情報を優先する。</li>
+</ul>
+<p class="note">元のアジェンダに記載していたW3Schoolsは、今回の各セクションのタスクでは必須ではないため、必須サイト一覧からは外しています。HTML学習を追加したくなったときに活用できます：<a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">W3Schools HTML Tutorial</a>。</p>
+</section>
+
+<footer>スマホで始める IT入門｜7つの学習セクション・詳細ガイド</footer>
+</main>
+</body>
+</html>
